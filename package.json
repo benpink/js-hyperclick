@@ -4,7 +4,7 @@
   "version": "1.12.2",
   "description": "A hyperclick provider that lets you jump to where variables are defined.",
   "keywords": [],
-  "repository": "https://github.com/benpink/js-hyperclick",
+  "repository": "https://github.com/AsaAyers/js-hyperclick",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
