@@ -23,29 +23,33 @@ track properties (ex. `identifier.property`), see below for more info.
 
 ## I configured {babel,eslint,flow,webpack,etc} to avoid '../' in my imports. How can I configure `js-hyperclick`?
 
-First, I think it's a bad idea to do that and I never configure my projects this
+This is a fork of AsaAyers [js-hyperclick](https://github.com/AsaAyers/js-hyperclick) that includes a `Module Roots` option within the package settings.
+
+If you keep your common modules in `src/lib`, for example, you should add that path to the package setting.
+
+~~First, I think it's a bad idea to do that and I never configure my projects this
 way. In a twitter conversation to see if we could standardize this across
-projects some good points were made:
+projects some good points were made:~~
 
-> @nodkz the module loader is locked (in node anyways) so any feature additions should be rejected
->
-> -[@evanhlucas](https://twitter.com/evanhlucas/status/771750602967703561)
+~~@nodkz the module loader is locked (in node anyways) so any feature additions should be rejected~~
 
-and
+~~-[@evanhlucas](https://twitter.com/evanhlucas/status/771750602967703561)~~
 
-> @nodkz @left_pad @izs @slicknet @zpao I think this is at odds with Node resolution mechanism so it likely won’t happen.
->
-> -[@dan_abramov](https://twitter.com/dan_abramov/status/771741318129324032)
+~~and~~
 
-If you're still set on custom module directories, there is a way to configure
+~~@nodkz @left_pad @izs @slicknet @zpao I think this is at odds with Node resolution mechanism so it likely won’t happen.~~
+
+~~-[@dan_abramov](https://twitter.com/dan_abramov/status/771741318129324032)~~
+
+~~If you're still set on custom module directories, there is a way to configure
 it. If you keep your common modules in `src/lib` you can add this to your
-`package.json`:
+`package.json`:~~
 
-```json
+~~```json
 "moduleRoots": [ "src/lib" ],
-```
+```~~
 
-With that in place `require('foo')` or `import 'foo'` with both locate your `src/lib/foo` module.
+~~With that in place `require('foo')` or `import 'foo'` with both locate your `src/lib/foo` module.~~
 
 ## Why does `require('./otherfile')` open `otherfile.js` instead of `otherfile.jsx`?
 

@@ -123,6 +123,9 @@ describe("resolveModule", () => {
       type: "file",
       filename: path.join(__dirname, "../lib/core/parse-code.js"),
     }
+    const options = {
+      moduleRoots: ["./lib/core"],
+    }
 
     const actual = resolveModule(__filename, suggestion, options)
     expect(actual).toEqual(expected)
