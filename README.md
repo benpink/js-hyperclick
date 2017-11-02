@@ -1,22 +1,22 @@
 # js-hyperclick package
 
-A [hyperclick][hyperclick] provider that lets you jump to where variables are defined.
+A [hyperclick](https://atom.io/packages/hyperclick) provider that lets you jump to where variables are defined.
 
-![screenshot]( https://raw.githubusercontent.com/AsaAyers/js-hyperclick/master/screenshots/Selection_107.png)
+**NOTE: Forked by [benpink](https://github.com/benpink). Install via `apm install https://github.com/benpink/js-hyperclick.git`.**
+
+![screenshot]( https://raw.githubusercontent.com/benpink/js-hyperclick/master/screenshots/Selection_107.png)
 
 This project was created primarily to assist navigating projects that use many
 small modules. This project solves some of my problems and I share it in the
 hope that it solves some of yours.
 
-Forked by [benpink](https://github.com/benpink). Install via `apm install https://github.com/benpink/js-hyperclick.git`.
-
 # FAQ
 
 ## What is js-hyperclick?
 
-js-hyperclick is a scanner that integrates with [hyperclick][hyperclick]. It does not have
+js-hyperclick is a scanner that integrates with [hyperclick](https://atom.io/packages/hyperclick). It does not have
 any keyboard shortcuts or commands. It does not have any user interface. All of that
-is managed by [hyperclick][hyperclick].
+is managed by [hyperclick](https://atom.io/packages/hyperclick).
 
 js-hyperclick uses Babylon (Babel) to parse JavaScript. It scans for all
 imports, exports, requires, identifiers (variables), and scopes. Using this
@@ -25,33 +25,11 @@ track properties (ex. `identifier.property`), see below for more info.
 
 ## I configured {babel,eslint,flow,webpack,etc} to avoid '../' in my imports. How can I configure `js-hyperclick`?
 
-This is a fork of AsaAyers [js-hyperclick](https://github.com/AsaAyers/js-hyperclick) that includes a `Module Roots` option within the package settings.
+This fork includes a `Module Roots` option within the package settings.
 
-If you keep your common modules in `src/lib`, for example, you should add that path to the package setting.
+For example, If you keep your common modules in `./src` you should add that path to the package setting.
 
-~~First, I think it's a bad idea to do that and I never configure my projects this
-way. In a twitter conversation to see if we could standardize this across
-projects some good points were made:~~
-
-~~@nodkz the module loader is locked (in node anyways) so any feature additions should be rejected~~
-
-~~-[@evanhlucas](https://twitter.com/evanhlucas/status/771750602967703561)~~
-
-~~and~~
-
-~~@nodkz @left_pad @izs @slicknet @zpao I think this is at odds with Node resolution mechanism so it likely won’t happen.~~
-
-~~-[@dan_abramov](https://twitter.com/dan_abramov/status/771741318129324032)~~
-
-~~If you're still set on custom module directories, there is a way to configure
-it. If you keep your common modules in `src/lib` you can add this to your
-`package.json`:~~
-
-~~```json
-"moduleRoots": [ "src/lib" ],
-```~~
-
-~~With that in place `require('foo')` or `import 'foo'` with both locate your `src/lib/foo` module.~~
+![screenshot]( https://raw.githubusercontent.com/benpink/js-hyperclick/master/screenshots/moduleRootsSettingScreencap.png)
 
 ## Why does `require('./otherfile')` open `otherfile.js` instead of `otherfile.jsx`?
 
