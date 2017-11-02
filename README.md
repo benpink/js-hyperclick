@@ -8,6 +8,8 @@ This project was created primarily to assist navigating projects that use many
 small modules. This project solves some of my problems and I share it in the
 hope that it solves some of yours.
 
+Forked by [benpink](https://github.com/benpink). Install via `apm install https://github.com/benpink/js-hyperclick.git`.
+
 # FAQ
 
 ## What is js-hyperclick?
