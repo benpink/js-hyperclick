@@ -2,7 +2,7 @@
 
 A [hyperclick](https://atom.io/packages/hyperclick) provider that lets you jump to where variables are defined.
 
-**NOTE: Forked by [benpink](https://github.com/benpink).** Install via `apm install https://github.com/benpink/js-hyperclick.git`.**
+**NOTE: Forked by [benpink](https://github.com/benpink).** Install via `apm install https://github.com/benpink/js-hyperclick.git`.
 
 ![screenshot]( https://raw.githubusercontent.com/benpink/js-hyperclick/master/screenshots/Selection_107.png)
 
